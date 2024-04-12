@@ -78,6 +78,9 @@ img {
     max-width: 100%;
 }
 
+.brands {
+    text-align: center;
+}
 
 .brands h2 {
     font-size: 1rem;
@@ -111,6 +114,8 @@ img {
     background-color: var(--gray);
     border-radius: 5px;
     padding: 1rem;
+
+    container: testemunhoCard / inline-size;
 }
 
 .testemunho_thumb {
@@ -188,6 +193,31 @@ img {
 
 }
 
+.testemunho_card {
+    display: flex;
+    /* align-items: center; */
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@container testemunhoCard (min-width: 42.187em){
+    .testemunho_card {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.icons li{
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.icons li + li {
+    margin-left: 1rem;
+}
+
 @media screen and (min-width: 46.25em) {
 
     body {
@@ -220,12 +250,6 @@ h2 {
 
     .header-menu a {
         padding: 1rem;
-    }
-
-    .testemunho {
-        display: flex;
-        /* align-items: center; */
-        gap: 1rem;
     }
 
     .contato_image {
@@ -264,9 +288,6 @@ h2 {
         margin-bottom: 6.25rem;
     }
 
-    .testemunho {
-        flex-direction: column;
-    }
     .row {
         gap: 1rem;
     }
